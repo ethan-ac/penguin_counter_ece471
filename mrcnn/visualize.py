@@ -118,7 +118,7 @@ def display_instances(image, boxes, masks, class_ids, class_names,
     ax.set_ylim(height + 10, -10)
     ax.set_xlim(-10, width + 10)
     # ax.axis('off')
-    ax.axis(title, fontname='Comic Sans MS', fontsize=20)
+    ax.axis('on')
     ax.set_xlabel(title, fontname='Comic Sans MS', fontsize=20)
     ax.set_title(title, fontname='Comic Sans MS')
 
