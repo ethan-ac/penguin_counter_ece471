@@ -20,7 +20,7 @@ from matplotlib import patches,  lines
 from matplotlib.patches import Polygon
 import IPython.display
 
-from colorama import Fore, Back, Style
+from termcolor import colored
 
 # Root directory of the project
 ROOT_DIR = os.path.abspath("../")
@@ -142,7 +142,7 @@ def display_instances(image, boxes, masks, class_ids, class_names,
             class_id = class_ids[i]
             score = scores[i] if scores is not None else None
             label = class_names[class_id]
-            caption = Fore.RED + "{} {:.3f}".format(label, score) if score else label
+            caption = colored("{} {:.3f}".format(label, score) if score else label, 'red')
         else:
             caption = captions[i]
         ax.text(x1, y1 + 8, caption,
