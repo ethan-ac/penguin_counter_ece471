@@ -118,7 +118,7 @@ def display_instances(image, boxes, masks, class_ids, class_names,
     ax.set_ylim(height + 10, -10)
     ax.set_xlim(-10, width + 10)
     ax.axis('off')
-    ax.set_title(title, fontsize=20)
+    ax.set_title(title, fontsize=30)
 
     masked_image = image.astype(np.uint32).copy()
     for i in range(N):
